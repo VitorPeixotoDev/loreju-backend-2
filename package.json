@@ -1,0 +1,8 @@
+{
+  "name": "loreju-backend-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:VitorPeixotoDev/loreju-backend-2.git",
+  "author": "vitor2204 <vitorpeixotoc137@gmail.com>",
+  "license": "MIT"
+}
