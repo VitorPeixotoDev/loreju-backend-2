@@ -1,7 +1,13 @@
 import { Router, Request, Response } from 'express'
+import { CreateUserController } from './controllers/user/createUserController'
 
 const router = Router()
 
+// ROUTES USER
+router.post('/users', new CreateUserController().handle)
+
+
+// ROUTES TEST
 router.get('/test', (req: Request, res: Response) => {
     return res.json({name: "loreju-backend-ok"})
 })
