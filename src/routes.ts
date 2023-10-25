@@ -9,6 +9,7 @@ import { CreateProductController } from './controllers/product/CreateProductCont
 import { ListByCategoryControllers } from './controllers/product/ListByCategoryController'
 import { CreateOrderController } from './controllers/order/CreateOrderController'
 import { RemoveOrderCotroller } from './controllers/order/RemoveOrderController'
+import { AddItemController } from './controllers/order/AddItemController'
 import uploadConfig from './config/multer'
 
 import { isAuthenticated } from './middlewares/isAuthenticated'
@@ -33,6 +34,7 @@ router.get('/category/product', isAuthenticated, new ListByCategoryControllers()
 // ROUTES ORDER
 router.post('/order', isAuthenticated, new CreateOrderController().handle)
 router.delete('/order', isAuthenticated, new RemoveOrderCotroller().handle)
+router.post('/order/add', isAuthenticated, new AddItemController().handle)
 
 
 // ROUTES TEST
